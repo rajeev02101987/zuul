@@ -1,4 +1,7 @@
 language: java
+arch:
+  - amd64
+  - arm64
 matrix:
   include:
     - jdk: openjdk8

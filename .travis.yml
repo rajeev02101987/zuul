@@ -1,14 +1,15 @@
 language: java
-arch:
-  - amd64
-  - arm64
+
 matrix:
   include:
-    - jdk: openjdk8
+    - arch: arm64
+      jdk: openjdk8
       env: GRADLE_PUBLISH=true
-    - jdk: openjdk11
+    - arch: arm64
+      jdk: openjdk11
       env: GRADLE_PUBLISH=false
-    - jdk: openjdk14
+    - arch: arm64
+      jdk: openjdk14
       env: GRADLE_PUBLISH=false
 install: "./installViaTravis.sh"
 script: "./buildViaTravis.sh"
